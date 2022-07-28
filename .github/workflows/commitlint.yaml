@@ -1,7 +1,5 @@
-name:  Lint Commit Messages
-on: 
-  pull_request:
-    types: [closed]
+name:  Publish
+on: [pull_request, push]
 jobs:
   publish:
     runs-on: ubuntu-latest
