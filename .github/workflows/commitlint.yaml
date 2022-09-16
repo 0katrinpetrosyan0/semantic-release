@@ -11,31 +11,6 @@ jobs:
           node-version: 16
       - name: Semantic Release
         uses: cycjimmy/semantic-release-action@v3
-        # with:
-          # semantic_version: 18.0.0
-          # extra_plugins: |
-          #   @semantic-release/commit-analyzer@8.0.1
-          #   @semantic-release/release-notes-generator@9.0.3
-          #   @semantic-release/changelog@5.0.1
-          #   @semantic-release/github@7.2.3
-          #   @semantic-release/git@9.0.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-  # changelog:
-    # needs: [publish]
-    # runs-on: ubuntu-20.04
-    # steps:
-    #   - name: Run Changelog CI
-    #     uses: saadmk11/changelog-ci@v1.0.0
-
-      # - name: Semantic Release
-      #   uses: cycjimmy/semantic-release-action@v2.5.4
-      #   with:
-      #     semantic_version: 18.0.0
-      #     extra_plugins: |
-      #       @semantic-release/commit-analyzer@8.0.1
-      #       @semantic-release/release-notes-generator@9.0.3
-      #       @semantic-release/changelog@5.0.1
-      #       @semantic-release/github@7.2.3
-      #       @semantic-release/git@9.0.0

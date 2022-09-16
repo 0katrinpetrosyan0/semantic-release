@@ -5,7 +5,17 @@
     "@commitlint/config-conventional": "^17.0.3",
     "husky": "^8.0.1",
     "@semantic-release/github": "^8.0.4",
-    "semantic-release": "^19.0.3"
+    "semantic-release": "^19.0.3",
+    "auto-changelog": "*"
+  },
+  "scripts": {
+    "version": "auto-changelog -p && git add CHANGELOG.md"
+  },
+  "auto-changelog": {
+    "output": "HISTORY.md",
+    "template": "keepachangelog",
+    "unreleased": true,
+    "commitLimit": false
   },
   "release": {
     "branches": [
