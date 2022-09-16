@@ -3,10 +3,10 @@
   "devDependencies": {
     "@commitlint/cli": "^17.0.3",
     "@commitlint/config-conventional": "^17.0.3",
-    "@semantic-release/github": "^8.0.4",
-    "auto-changelog": "^2.4.0",
     "husky": "^8.0.1",
-    "semantic-release": "^19.0.3"
+    "@semantic-release/github": "^8.0.4",
+    "semantic-release": "^19.0.3",
+    "auto-changelog": "*"
   },
   "scripts": {
     "version": "auto-changelog -p && git add CHANGELOG.md"
@@ -19,9 +19,7 @@
   },
   "release": {
     "branches": [
-      "main",
-      "master",
-      "next"
+      "main", "master", "next"
     ]
   },
   "private": true,
@@ -29,6 +27,8 @@
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
     "@semantic-release/github",
-    "@semantic-release/npm"
+    "@semantic-release/npm",
+    "@semantic-release/changelog",
+    "@semantic-release/git"
   ]
 }
